@@ -22,6 +22,11 @@
 		</div>
 	</nav>
 <%= yield %>
-
+<footer>
+	<%for i in @footer do%>
+	<%= i.name %> 
+	<%= time_ago_in_words(i.created_at)%> ago
+<% end %>
+</footer>
 </body>
 </html>
